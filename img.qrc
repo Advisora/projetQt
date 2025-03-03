@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>profile.jpg</file>
+        <file>prof.png</file>
+        <file>search.png</file>
+        <file>likes.png</file>
+        <file>notif.png</file>
+        <file>suppr.png</file>
+        <file>modif.png</file>
+        <file>logo.png</file>
+        <file>ADVISORA.png</file>
+        <file>interfacelog.png</file>
+        <file>interface2.png</file>
+        <file>INTERCON.png</file>
+        <file>statis.png</file>
+        <file>sign.png</file>
+    </qresource>
+    <qresource prefix="/imm"/>
+</RCC>

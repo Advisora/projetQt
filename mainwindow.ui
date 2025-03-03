@@ -1,0 +1,4501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1303</width>
+    <height>811</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>-20</y>
+      <width>1251</width>
+      <height>1251</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="PageGestionProjets">
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>961</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255,255,255);
+font:20pt &quot;Segoe Ui&quot;;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_187">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/res/search.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_27">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>651</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_188">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>20</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/likes.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_81">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>530</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(160, 82, 45);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #D2B48C; /* Marron soft */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_28">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>440</y>
+         <width>241</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_27">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>90</y>
+         <width>361</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_82">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>361</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Liste Des Projets</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_189">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/suppr.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_190">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/notif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_83">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>530</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_28">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>401</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_84">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>401</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter Un Projet</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_85">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>420</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_191">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>212</y>
+          <width>191</width>
+          <height>43</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Description :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_192">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>364</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Localisation :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_193">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>161</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Adresse :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_194">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>313</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Téléphone :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_195">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>59</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Nom Client :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_196">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>262</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Budget :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_197">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Prénom Client  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_122">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>268</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_123">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>64</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_124">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>217</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_125">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>115</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_126">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>166</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_127">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>319</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_128">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>370</y>
+          <width>159</width>
+          <height>43</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_198">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/modif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PageGestionRessources">
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>961</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255,255,255);
+font:20pt &quot;Segoe Ui&quot;;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_163">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/res/search.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_23">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>651</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_164">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>20</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/likes.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_71">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>530</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(160, 82, 45);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #D2B48C; /* Marron soft */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_24">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>440</y>
+         <width>241</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_15">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>90</y>
+         <width>361</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_72">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>361</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Liste Des Ressources</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_165">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/suppr.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_166">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/notif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_73">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>530</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_25">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>401</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_74">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>401</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter Un Objet</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_75">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>420</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_167">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>212</y>
+          <width>191</width>
+          <height>43</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Description :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_168">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>364</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Localisation :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_169">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>161</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Adresse :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_170">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>313</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Téléphone :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_171">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>59</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Nom Client :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_172">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>262</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Budget :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_173">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Prénom Client  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_108">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>268</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_109">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>64</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_110">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>217</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_111">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>115</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_112">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>166</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_113">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>319</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_114">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>370</y>
+          <width>159</width>
+          <height>43</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_174">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/modif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PageGestionStratgies">
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>961</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255,255,255);
+font:20pt &quot;Segoe Ui&quot;;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_151">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/res/search.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_21">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>651</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_152">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>20</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/likes.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_66">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>530</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(160, 82, 45);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #D2B48C; /* Marron soft */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_22">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>440</y>
+         <width>241</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_23">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>90</y>
+         <width>361</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_67">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>361</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Liste Des Stratégies</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_153">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/suppr.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_154">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/notif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_68">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>530</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_24">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>401</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_69">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>401</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter Une Stratégie</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_70">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>420</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_155">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>212</y>
+          <width>191</width>
+          <height>43</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Description :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_156">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>364</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Localisation :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_157">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>161</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Adresse :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_158">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>313</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Téléphone :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_159">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>59</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Nom Client :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_160">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>262</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Budget :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_161">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Prénom Client  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_101">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>268</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_102">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>64</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_103">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>217</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_104">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>115</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_105">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>166</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_106">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>319</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_107">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>370</y>
+          <width>159</width>
+          <height>43</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_162">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/modif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PageGestionEvenements">
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>961</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255,255,255);
+font:20pt &quot;Segoe Ui&quot;;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_139">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/res/search.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_19">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>651</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_140">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>20</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/likes.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_61">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>530</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(160, 82, 45);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #D2B48C; /* Marron soft */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_20">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>440</y>
+         <width>241</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_21">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>90</y>
+         <width>361</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_62">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>361</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Liste Des Evenements</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_141">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/suppr.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_142">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/notif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_63">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>530</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_22">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>401</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_64">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>401</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter Un Evenement</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_65">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>420</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_143">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>212</y>
+          <width>191</width>
+          <height>43</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Description :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_144">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>364</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Localisation :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_145">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>161</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Adresse :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_146">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>313</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Téléphone :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_147">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>59</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Nom Client :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_148">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>262</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Budget :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_149">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Prénom Client  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_94">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>268</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_95">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>64</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_96">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>217</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_97">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>115</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_98">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>166</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_99">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>319</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_100">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>370</y>
+          <width>159</width>
+          <height>43</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_150">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/modif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PageGestionEmployees">
+     <widget class="QStackedWidget" name="stackedWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>961</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QFrame" name="ajoutframe">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>961</width>
+          <height>591</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(255,255,255);
+font:20pt &quot;Segoe Ui&quot;;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_201">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>20</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/res/search.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="barrederecherche_29">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>20</y>
+           <width>651</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+         </property>
+         <property name="cursorMoveStyle">
+          <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_202">
+         <property name="geometry">
+          <rect>
+           <x>770</x>
+           <y>20</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image:url(:/res/likes.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_203">
+         <property name="geometry">
+          <rect>
+           <x>810</x>
+           <y>20</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image:url(:/res/notif.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_30">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>80</y>
+           <width>871</width>
+           <height>431</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="pushButton_86">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>871</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+          </property>
+          <property name="text">
+           <string>Ajouter Un Employée</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_204">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>110</y>
+            <width>191</width>
+            <height>43</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;genre :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_205">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>160</y>
+            <width>191</width>
+            <height>44</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;mot de passe :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_206">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>60</y>
+            <width>191</width>
+            <height>44</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;mail :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_207">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>210</y>
+            <width>191</width>
+            <height>44</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Téléphone :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_208">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>59</y>
+            <width>191</width>
+            <height>44</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Nom e&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;mployé&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_209">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>160</y>
+            <width>191</width>
+            <height>44</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Poste  e&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;mployé&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_210">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>110</y>
+            <width>201</width>
+            <height>44</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Prénom e&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;mployé&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_poste">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>160</y>
+            <width>159</width>
+            <height>44</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_nom">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>64</y>
+            <width>159</width>
+            <height>44</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_prenom">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>110</y>
+            <width>159</width>
+            <height>44</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_mail">
+          <property name="geometry">
+           <rect>
+            <x>600</x>
+            <y>60</y>
+            <width>159</width>
+            <height>44</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_password">
+          <property name="geometry">
+           <rect>
+            <x>600</x>
+            <y>160</y>
+            <width>159</width>
+            <height>44</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_num">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>210</y>
+            <width>159</width>
+            <height>43</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_211">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>210</y>
+            <width>211</width>
+            <height>44</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;date de naissance:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QDateEdit" name="dateEdit_dateN">
+          <property name="geometry">
+           <rect>
+            <x>630</x>
+            <y>220</y>
+            <width>214</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/* --- Styling the Date Frame (QFrame) --- */
+QFrame#dateFrame {
+    background-color: #F4F4F4; /* Light grey background */
+    border: 2px solid #8B9B3D; /* Olive green border */
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 250px;
+    min-height: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Styling QDateEdit inside the Frame --- */
+QDateEdit {
+    background-color: white;
+    border: 2px solid #8B9B3D;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 14px;
+    color: #333;
+    min-width: 200px;
+}
+
+/* --- When hovering over the Date Picker --- */
+QDateEdit:hover {
+    border: 2px solid #A4C73C; /* Brighter Olive Green */
+    box-shadow: 0px 0px 5px rgba(164, 199, 60, 0.7);
+}
+
+/* --- When clicking inside the Date Picker --- */
+QDateEdit:focus {
+    border: 2px solid #6C7C2F; /* Darker Olive Green */
+    background-color: #FAFAFA;
+}
+
+/* --- Dropdown Arrow Styling --- */
+QDateEdit::drop-down {
+    border: none;
+    background: transparent;
+    width: 20px;
+}
+
+/* --- Dropdown Button --- */
+QDateEdit::down-arrow {
+    image: url(:/icons/calendar.png); /* Add a custom calendar icon */
+    width: 16px;
+    height: 16px;
+}
+</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_ajouter">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>310</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+          </property>
+          <property name="text">
+           <string>Ajouter</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_89">
+          <property name="geometry">
+           <rect>
+            <x>440</x>
+            <y>310</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color: rgb(160, 82, 45);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #D2B48C; /* Marron soft */
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Annuler</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_genre">
+          <property name="geometry">
+           <rect>
+            <x>600</x>
+            <y>120</y>
+            <width>151</width>
+            <height>26</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_215">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>260</y>
+            <width>191</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;etat&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_etat">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>260</y>
+            <width>151</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <widget class="QFrame" name="frame_8">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>961</width>
+          <height>591</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(255,255,255);
+font:20pt &quot;Segoe Ui&quot;;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_212">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>20</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/res/search.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="barrederecherche_31">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>20</y>
+           <width>651</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+         </property>
+         <property name="cursorMoveStyle">
+          <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_213">
+         <property name="geometry">
+          <rect>
+           <x>770</x>
+           <y>20</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image:url(:/res/likes.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_214">
+         <property name="geometry">
+          <rect>
+           <x>810</x>
+           <y>20</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image:url(:/res/notif.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>90</y>
+           <width>341</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/res/statis.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>321</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/res/statis.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>90</y>
+           <width>331</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/res/statis.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>961</width>
+          <height>591</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(255,255,255);
+font:20pt &quot;Segoe Ui&quot;;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_175">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>20</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/res/search.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="barrederecherche_25">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>20</y>
+           <width>651</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+         </property>
+         <property name="cursorMoveStyle">
+          <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_176">
+         <property name="geometry">
+          <rect>
+           <x>770</x>
+           <y>20</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image:url(:/res/likes.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_177">
+         <property name="geometry">
+          <rect>
+           <x>810</x>
+           <y>20</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image:url(:/res/notif.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QFrame" name="affichage">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>851</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="pushButton_80">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>361</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+          </property>
+          <property name="text">
+           <string>Liste Des Employées</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ajout">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>590</x>
+            <y>60</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+          </property>
+          <property name="text">
+           <string>Ajouter</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButton_79">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>450</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+         </property>
+         <property name="text">
+          <string>Statistiques</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_78">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>450</y>
+           <width>121</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+background-color: rgb(160, 82, 45);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #D2B48C; /* Marron soft */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>PDF</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_200">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>450</y>
+           <width>61</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image:url(:/res/suppr.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_199">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>510</y>
+           <width>61</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image:url(:/res/modif.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="barrederecherche_26">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>460</y>
+           <width>241</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+         </property>
+         <property name="cursorMoveStyle">
+          <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="barrederecherche_30">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>510</y>
+           <width>241</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+         </property>
+         <property name="cursorMoveStyle">
+          <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PageGestionClients">
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>961</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255,255,255);
+font:20pt &quot;Segoe Ui&quot;;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_103">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/res/search.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_13">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>651</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_104">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>20</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/likes.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_48">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>530</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(160, 82, 45);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #D2B48C; /* Marron soft */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="barrederecherche_14">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>440</y>
+         <width>241</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_13">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>90</y>
+         <width>361</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_46">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>361</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Liste Des Clients</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_106">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/suppr.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_105">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>20</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/notif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_47">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>530</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_16">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>401</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_49">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>401</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color:rgb(209, 199, 161);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #F5F5DC; /* Beige soft */
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter Un Client</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_50">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>420</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_108">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>212</y>
+          <width>191</width>
+          <height>43</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Description :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_109">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>364</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Localisation :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_110">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>161</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Adresse :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_111">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>313</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Téléphone :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_112">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>59</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Nom Client :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_113">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>262</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Budget :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_114">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>191</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">label-&gt;setStyleSheet(&quot;QLabel { color: black; font-size: 10px; border: none; }&quot;);
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Prénom Client  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_73">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>268</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_74">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>64</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_75">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>217</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_76">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>115</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_77">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>166</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_78">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>319</y>
+          <width>159</width>
+          <height>44</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_79">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>370</y>
+          <width>159</width>
+          <height>43</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_107">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>440</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/res/modif.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="barreverticale">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>201</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>159</red>
+          <green>207</green>
+          <blue>54</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>132</red>
+          <green>172</green>
+          <blue>45</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>53</red>
+          <green>69</green>
+          <blue>18</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>71</red>
+          <green>92</green>
+          <blue>24</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>180</red>
+          <green>196</green>
+          <blue>145</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="127">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Accent">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>159</red>
+          <green>207</green>
+          <blue>54</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>132</red>
+          <green>172</green>
+          <blue>45</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>53</red>
+          <green>69</green>
+          <blue>18</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>71</red>
+          <green>92</green>
+          <blue>24</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>180</red>
+          <green>196</green>
+          <blue>145</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="127">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Accent">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>53</red>
+          <green>69</green>
+          <blue>18</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>159</red>
+          <green>207</green>
+          <blue>54</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>132</red>
+          <green>172</green>
+          <blue>45</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>53</red>
+          <green>69</green>
+          <blue>18</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>71</red>
+          <green>92</green>
+          <blue>24</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>53</red>
+          <green>69</green>
+          <blue>18</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>53</red>
+          <green>69</green>
+          <blue>18</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>98</red>
+          <green>135</green>
+          <blue>55</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>106</red>
+          <green>138</green>
+          <blue>36</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="127">
+          <red>53</red>
+          <green>69</green>
+          <blue>18</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Accent">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>138</red>
+          <green>179</green>
+          <blue>47</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(98, 135, 55);
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>141</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/res/prof.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GestionEvenementsButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>200</y>
+       <width>199</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+     </property>
+     <property name="text">
+      <string>Gestion évennements</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="gestionClientsButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>260</y>
+       <width>199</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+     </property>
+     <property name="text">
+      <string>Gestion Clients</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GestionProjetsButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>320</y>
+       <width>199</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+     </property>
+     <property name="text">
+      <string>Gestion Projets</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GestionRessourcesButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>380</y>
+       <width>199</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+     </property>
+     <property name="text">
+      <string>Gestion Ressources</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GestionStrategiesButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>430</y>
+       <width>199</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+     </property>
+     <property name="text">
+      <string>Gestion Stratégies</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GestionEmployeesButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>480</y>
+       <width>199</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+     </property>
+     <property name="text">
+      <string>Gestion Employées</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GestionEvenementsButton_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>199</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+     </property>
+     <property name="text">
+      <string>Accueil</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1303</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

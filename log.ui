@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>832</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>0</y>
+     <width>1291</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>GroupBox</string>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>801</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane {
+    border: 2px solid #D35400;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>-230</x>
+        <y>0</y>
+        <width>1401</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image:url(:/res/interface2.png)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>151</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>200</y>
+        <width>113</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>240</y>
+        <width>113</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>280</y>
+        <width>113</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_6">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>160</y>
+        <width>113</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_7">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>90</y>
+        <width>270</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- QLineEdit Styling (Fine Border with Olive Green) --- */
+QLineEdit {
+    padding: 8px;
+    border: 1.5px solid #A3A37A; /* Olive Green fine border */
+    border-radius: 6px; /* Smooth rounded edges */
+    font-size: 16px;
+    color: #2C3E50; /* Dark grey text */
+    background-color: #FAFAF8; /* Soft white background */
+    height: 30px; /* Ensures consistency */
+    min-width: 250px; /* Keeps input size uniform */
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Focus Effect for QLineEdit --- */
+QLineEdit:focus {
+    border: 1.5px solid #808000; /* Darker Olive Green when focused */
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 0px 0px 6px rgba(128, 128, 0, 0.4); /* Soft glow */
+    outline: none;
+}
+
+/* --- Placeholder Styling --- */
+QLineEdit::placeholder {
+    color: #A9A9A9; /* Soft grey placeholder text */
+    font-style: italic;
+}
+
+/* --- Password Field Styling --- */
+QLineEdit[echoMode=&quot;2&quot;] {  
+    letter-spacing: 4px; /* Adjust spacing for password dots */
+}</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>310</y>
+        <width>214</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- QPushButton Styling (Bright Olive Green with Animation) --- */
+QPushButton {
+    background-color: #8B9B3D;       /* Bright Olive Green */
+    color: white;                    /* White text */
+    padding: 12px 30px;               /* Generous padding */
+    font-size: 16px;                  /* Font size */
+    font-weight: bold;                /* Bold text */
+    border-radius: 8px;               /* Rounded corners */
+    border: 2px solid #6C7C2F;        /* Dark olive border */
+    min-width: 150px;                 /* Minimum button width */
+    text-align: center;               /* Center text */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    opacity: 0;                       /* Start with the text hidden */
+    animation: fadeInText 0.5s forwards; /* Text fade-in animation */
+}
+
+/* --- Hover Effect for QPushButton (Bright Olive Green) --- */
+QPushButton:hover {
+    background-color: #A4C73C;        /* Lighter Olive Green on hover */
+    box-shadow: 0px 5px 20px rgba(139, 155, 61, 0.6); /* Subtle shadow */
+    cursor: pointer;                  /* Pointer cursor on hover */
+    transform: scale(1.05);            /* Button slightly grows on hover */
+}
+
+/* --- Pressed State (Slight Movement and Darker Color) --- */
+QPushButton:pressed {
+    background-color: #7A8F33;        /* Darker Olive Green when pressed */
+    box-shadow: none;                  /* No shadow on press */
+    transform: scale(0.98);            /* Slightly shrinks when pressed */
+}
+
+/* --- Disabled State for QPushButton (Gray) --- */
+QPushButton:disabled {
+    background-color: #BDBDBD;         /* Gray background */
+    color: #888888;                    /* Gray text */
+    cursor: not-allowed;               /* Disable cursor */
+}
+
+/* --- Focused State for QPushButton (Glow Effect) --- */
+QPushButton:focus {
+    outline: none;                     /* Remove default outline */
+    box-shadow: 0px 0px 10px rgba(139, 155, 61, 0.8); /* Glowing effect */
+}
+
+/* --- Text Fade-in Animation (Button Text Animation) --- */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;    /* Text starts as invisible */
+        transform: translateY(-10px);  /* Text starts slightly above */
+    }
+    100% {
+        opacity: 1;    /* Text becomes fully visible */
+        transform: translateY(0);  /* Text settles into place */
+    }
+}
+</string>
+      </property>
+      <property name="text">
+       <string>se connecter</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>0</y>
+        <width>151</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>-80</x>
+        <y>0</y>
+        <width>851</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/res/INTERCON.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>300</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- QLabel Styling (Titres au-dessus des QLineEdit) --- */
+QLabel {
+    font-size: 14px;
+    font-weight: bold;
+    color: #556B2F; /* Olive Green */
+    padding-bottom: 4px; /* Espacement avec le champ */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>300</y>
+        <width>214</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- QPushButton Styling (Bright Olive Green with Animation) --- */
+QPushButton {
+    background-color: #8B9B3D;       /* Bright Olive Green */
+    color: white;                    /* White text */
+    padding: 12px 30px;               /* Generous padding */
+    font-size: 16px;                  /* Font size */
+    font-weight: bold;                /* Bold text */
+    border-radius: 8px;               /* Rounded corners */
+    border: 2px solid #6C7C2F;        /* Dark olive border */
+    min-width: 150px;                 /* Minimum button width */
+    text-align: center;               /* Center text */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    opacity: 0;                       /* Start with the text hidden */
+    animation: fadeInText 0.5s forwards; /* Text fade-in animation */
+}
+
+/* --- Hover Effect for QPushButton (Bright Olive Green) --- */
+QPushButton:hover {
+    background-color: #A4C73C;        /* Lighter Olive Green on hover */
+    box-shadow: 0px 5px 20px rgba(139, 155, 61, 0.6); /* Subtle shadow */
+    cursor: pointer;                  /* Pointer cursor on hover */
+    transform: scale(1.05);            /* Button slightly grows on hover */
+}
+
+/* --- Pressed State (Slight Movement and Darker Color) --- */
+QPushButton:pressed {
+    background-color: #7A8F33;        /* Darker Olive Green when pressed */
+    box-shadow: none;                  /* No shadow on press */
+    transform: scale(0.98);            /* Slightly shrinks when pressed */
+}
+
+/* --- Disabled State for QPushButton (Gray) --- */
+QPushButton:disabled {
+    background-color: #BDBDBD;         /* Gray background */
+    color: #888888;                    /* Gray text */
+    cursor: not-allowed;               /* Disable cursor */
+}
+
+/* --- Focused State for QPushButton (Glow Effect) --- */
+QPushButton:focus {
+    outline: none;                     /* Remove default outline */
+    box-shadow: 0px 0px 10px rgba(139, 155, 61, 0.8); /* Glowing effect */
+}
+
+/* --- Text Fade-in Animation (Button Text Animation) --- */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;    /* Text starts as invisible */
+        transform: translateY(-10px);  /* Text starts slightly above */
+    }
+    100% {
+        opacity: 1;    /* Text becomes fully visible */
+        transform: translateY(0);  /* Text settles into place */
+    }
+}
+</string>
+      </property>
+      <property name="text">
+       <string>s'inscrire</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>290</y>
+        <width>270</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- QLineEdit Styling (Fine Border with Olive Green) --- */
+QLineEdit {
+    padding: 8px;
+    border: 1.5px solid #A3A37A; /* Olive Green fine border */
+    border-radius: 6px; /* Smooth rounded edges */
+    font-size: 16px;
+    color: #2C3E50; /* Dark grey text */
+    background-color: #FAFAF8; /* Soft white background */
+    height: 30px; /* Ensures consistency */
+    min-width: 250px; /* Keeps input size uniform */
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Focus Effect for QLineEdit --- */
+QLineEdit:focus {
+    border: 1.5px solid #808000; /* Darker Olive Green when focused */
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 0px 0px 6px rgba(128, 128, 0, 0.4); /* Soft glow */
+    outline: none;
+}
+
+/* --- Placeholder Styling --- */
+QLineEdit::placeholder {
+    color: #A9A9A9; /* Soft grey placeholder text */
+    font-style: italic;
+}
+
+/* --- Password Field Styling --- */
+QLineEdit[echoMode=&quot;2&quot;] {  
+    letter-spacing: 4px; /* Adjust spacing for password dots */
+}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>230</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- QLabel Styling (Titres au-dessus des QLineEdit) --- */
+QLabel {
+    font-size: 14px;
+    font-weight: bold;
+    color: #556B2F; /* Olive Green */
+    padding-bottom: 4px; /* Espacement avec le champ */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>mail:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>20</y>
+        <width>301</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- Title Styling for QLabel with ID 'title' --- */
+    font-size: 50px;            /* Large font size for title */
+    font-weight: bold;          /* Bold title */
+    color: #556B2F;             /* Olive green color */
+    padding-bottom: 20px;       /* Space between title and content */
+    text-align: center;         /* Center align the title */
+    margin-top: 40px;           /* Space at the top */
+    font-family: 'Arial', sans-serif; /* Elegant font */
+
+
+/* --- Optional: Hover Effect for Title --
+    color: #3E4F1F;             /* Slightly darker olive green on hover */
+    cursor: pointer;           /* Makes the title clickable */
+</string>
+      </property>
+      <property name="text">
+       <string>connexion</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>370</y>
+        <width>264</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- QPushButton Styling (Bright Olive Green with Animation) --- */
+QPushButton {
+    background-color: #8B9B3D;       /* Bright Olive Green */
+    color: white;                    /* White text */
+    padding: 12px 30px;               /* Generous padding */
+    font-size: 16px;                  /* Font size */
+    font-weight: bold;                /* Bold text */
+    border-radius: 8px;               /* Rounded corners */
+    border: 2px solid #6C7C2F;        /* Dark olive border */
+    min-width: 200px;                 /* Minimum button width */
+    text-align: center;               /* Center text */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    opacity: 0;                       /* Start with the text hidden */
+    animation: fadeInText 0.5s forwards; /* Text fade-in animation */
+}
+
+/* --- Hover Effect for QPushButton (Bright Olive Green) --- */
+QPushButton:hover {
+    background-color: #A4C73C;        /* Lighter Olive Green on hover */
+    box-shadow: 0px 5px 20px rgba(139, 155, 61, 0.6); /* Subtle shadow */
+    cursor: pointer;                  /* Pointer cursor on hover */
+    transform: scale(1.05);            /* Button slightly grows on hover */
+}
+
+/* --- Pressed State (Slight Movement and Darker Color) --- */
+QPushButton:pressed {
+    background-color: #7A8F33;        /* Darker Olive Green when pressed */
+    box-shadow: none;                  /* No shadow on press */
+    transform: scale(0.98);            /* Slightly shrinks when pressed */
+}
+
+/* --- Disabled State for QPushButton (Gray) --- */
+QPushButton:disabled {
+    background-color: #BDBDBD;         /* Gray background */
+    color: #888888;                    /* Gray text */
+    cursor: not-allowed;               /* Disable cursor */
+}
+
+/* --- Focused State for QPushButton (Glow Effect) --- */
+QPushButton:focus {
+    outline: none;                     /* Remove default outline */
+    box-shadow: 0px 0px 10px rgba(139, 155, 61, 0.8); /* Glowing effect */
+}
+
+/* --- Text Fade-in Animation (Button Text Animation) --- */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;    /* Text starts as invisible */
+        transform: translateY(-10px);  /* Text starts slightly above */
+    }
+    100% {
+        opacity: 1;    /* Text becomes fully visible */
+        transform: translateY(0);  /* Text settles into place */
+    }
+}
+</string>
+      </property>
+      <property name="text">
+       <string>se connecter</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>220</y>
+        <width>270</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* --- QLineEdit Styling (Fine Border with Olive Green) --- */
+QLineEdit {
+    padding: 8px;
+    border: 1.5px solid #A3A37A; /* Olive Green fine border */
+    border-radius: 6px; /* Smooth rounded edges */
+    font-size: 16px;
+    color: #2C3E50; /* Dark grey text */
+    background-color: #FAFAF8; /* Soft white background */
+    height: 30px; /* Ensures consistency */
+    min-width: 250px; /* Keeps input size uniform */
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Focus Effect for QLineEdit --- */
+QLineEdit:focus {
+    border: 1.5px solid #808000; /* Darker Olive Green when focused */
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 0px 0px 6px rgba(128, 128, 0, 0.4); /* Soft glow */
+    outline: none;
+}
+
+/* --- Placeholder Styling --- */
+QLineEdit::placeholder {
+    color: #A9A9A9; /* Soft grey placeholder text */
+    font-style: italic;
+}
+
+/* --- Password Field Styling --- */
+QLineEdit[echoMode=&quot;2&quot;] {  
+    letter-spacing: 4px; /* Adjust spacing for password dots */
+}</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,10 +1,9 @@
+build/
 *.pro.user
-*.pro.user.*
+*.idx
 *.o
-*.so
-*.a
 *.exe
 *.dll
-moc_*
-ui_*
-qrc_*
+*.obj
+*.pdb
+*.log

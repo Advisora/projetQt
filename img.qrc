@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>profile.jpg</file>
+        <file>prof.png</file>
+        <file>search.png</file>
+        <file>likes.png</file>
+        <file>notif.png</file>
+        <file>suppr.png</file>
+        <file>modif.png</file>
+        <file>zoom.jpg</file>
+        <file>zoom.png</file>
+    </qresource>
+    <qresource prefix="/imm"/>
+</RCC>

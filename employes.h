@@ -4,6 +4,7 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QSqlQueryModel>
 #include <QDebug>
 
 class Employes
@@ -13,6 +14,9 @@ public:
     Employes(QString, QString, QString, QString, QString, QString, QString, QString, QString);
 
     bool ajouter();
+    QSqlQueryModel* afficher();
+    QSqlQueryModel* chercher(QString nom);  // Search employees by name
+    bool supprimer(QString num);  // Delete employee by num
 
 private:
     QString nom, prenom, mail, password, dateN, genre, poste, etat, num;

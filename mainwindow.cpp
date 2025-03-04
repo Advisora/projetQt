@@ -11,7 +11,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->comboBox_genre->addItem("Femme");
     ui->comboBox_genre->addItem("Autre");
 
-
     connect(ui->gestionClientsButton, &QPushButton::clicked, this, &MainWindow::on_gestionClientsButton_clicked);
     connect(ui->GestionEvenementsButton, &QPushButton::clicked, this, &MainWindow::on_GestionEvenementsButton_clicked);
     connect(ui->GestionProjetsButton, &QPushButton::clicked, this, &MainWindow::on_GestionProjetsButton_clicked);
@@ -21,7 +20,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->setCurrentIndex(0);
     qDebug() << "Initial page index: " << ui->stackedWidget->currentIndex();
 
-    // Connexion du signal currentTextChanged du QComboBox avec le slot
+    connect(ui->lineEdit_search, &QLineEdit::textChanged, this, &MainWindow::on_lineEdit_search_textChanged); // Connect search bar
+
     connect(ui->comboBox_genre, &QComboBox::currentTextChanged, this, &MainWindow::on_comboBox_currentTextChanged);
 }
 
@@ -29,72 +29,61 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
-void MainWindow::on_gestionClientsButton_clicked()
-{
+void MainWindow::on_gestionClientsButton_clicked() {
     ui->stackedWidget->setCurrentWidget(ui->PageGestionClients);
     qDebug() << "Switched to Gestion Clients page.";
 }
 
-void MainWindow::on_GestionEvenementsButton_clicked()
-{
+void MainWindow::on_GestionEvenementsButton_clicked() {
     ui->stackedWidget->setCurrentWidget(ui->PageGestionEvenements);
     qDebug() << "Switched to Gestion Evenements page.";
 }
 
-void MainWindow::on_GestionProjetsButton_clicked()
-{
+void MainWindow::on_GestionProjetsButton_clicked() {
     ui->stackedWidget->setCurrentWidget(ui->PageGestionProjets);
     qDebug() << "Switched to Gestion Projets page.";
 }
 
-void MainWindow::on_GestionRessourcesButton_clicked()
-{
+void MainWindow::on_GestionRessourcesButton_clicked() {
     ui->stackedWidget->setCurrentWidget(ui->PageGestionRessources);
     qDebug() << "Switched to Gestion Ressources page.";
 }
 
-void MainWindow::on_GestionStrategiesButton_clicked()
-{
+void MainWindow::on_GestionStrategiesButton_clicked() {
     qDebug() << "Switched to Gestion Strategies page.";
 }
 
-void MainWindow::on_GestionEmployeesButton_clicked()
-{
+void MainWindow::on_GestionEmployeesButton_clicked() {
     ui->stackedWidget->setCurrentWidget(ui->PageGestionEmployees);
     qDebug() << "Switched to Gestion Employees page.";
+    Employes emp;
+    ui->tableView->setModel(emp.afficher()); // Affiche les employés dans le tableau
 }
 
-void MainWindow::on_ajout_clicked()
-{
-    ui->stackedWidget_2->setCurrentWidget(ui->page);
-    qDebug() << "Switched to 'page' in stackedWidget_2.";
+void MainWindow::on_lineEdit_search_textChanged(const QString &text) {
+    QSqlQueryModel* model = employe.chercher(text);  // Search employees by name
+    ui->tableView->setModel(model);  // Display search results in the table
 }
 
-void MainWindow::on_pushButton_ajouter_clicked()
-{
-    QString nom = ui->lineEdit_nom->text();
-    QString prenom = ui->lineEdit_prenom->text();
-    QString mail = ui->lineEdit_mail->text();
-    QString password = ui->lineEdit_password->text();
-    QString dateN = ui->dateEdit_dateN->date().toString("yyyy-MM-dd");
-    QString genre = ui->comboBox_genre->currentText();
-    QString poste = ui->lineEdit_poste->text();
-    QString etat = ui->comboBox_etat->currentText();
-    QString num = ui->lineEdit_num->text();
+void MainWindow::on_supprimerButton_clicked() {
+    QModelIndexList selectedRows = ui->tableView->selectionModel()->selectedRows();
 
-    Employes e(nom, prenom, mail, password, dateN, genre, poste, etat, num);
-    if (e.ajouter())
-    {
-        QMessageBox::information(this, "Ajout", "Employé ajouté avec succès");
+    if (selectedRows.isEmpty()) {
+        QMessageBox::warning(this, "Avertissement", "Veuillez sélectionner un employé à supprimer.");
+        return;
     }
-    else
-    {
-        QMessageBox::warning(this, "Erreur", "Erreur lors de l'ajout de l'employé");
+
+    // Get the employee number (ID) from the selected row (assuming it's in the 7th column)
+    QString numToDelete = ui->tableView->model()->data(selectedRows.first().sibling(selectedRows.first().row(), 7)).toString();
+
+    if (employe.supprimer(numToDelete)) {
+        QMessageBox::information(this, "Succès", "Employé supprimé avec succès.");
+        on_lineEdit_search_textChanged(ui->lineEdit_search->text());  // Refresh the list after deletion
+    } else {
+        QMessageBox::critical(this, "Erreur", "Erreur lors de la suppression de l'employé.");
     }
 }
 
-// Slot pour le signal currentTextChanged du QComboBox
-void MainWindow::on_comboBox_currentTextChanged(const QString &arg1)
-{
-    qDebug() << "ComboBox value changed: " << arg1;
+void MainWindow::on_pushButton_ajouter_clicked() {
+    // Implement the addition logic here
 }

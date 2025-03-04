@@ -31,14 +31,78 @@ bool Employes::ajouter()
     query.bindValue(":etat", etat);
     query.bindValue(":num", num);
 
-    if (query.exec())
-    {
+    if (query.exec()) {
         qDebug() << "Employé ajouté avec succès";
         return true;
-    }
-    else
-    {
+    } else {
         qDebug() << "Erreur lors de l'ajout :" << query.lastError().text();
+        return false;
+    }
+}
+
+QSqlQueryModel* Employes::afficher()
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QSqlQuery query;
+
+    query.prepare("SELECT NOMEMP, PRENOMEMP, MAILEMP, DATENEMP, GENREEMP, POSTEEMP, ETATEMP, NUMEMP FROM EMPLOYES");
+
+    if (query.exec()) {
+        model->setQuery(query);
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Nom"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Prenom"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Email"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date de Naissance"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("Genre"));
+        model->setHeaderData(5, Qt::Horizontal, QObject::tr("Poste"));
+        model->setHeaderData(6, Qt::Horizontal, QObject::tr("Etat"));
+        model->setHeaderData(7, Qt::Horizontal, QObject::tr("Numéro"));
+        qDebug() << "Affichage réussi";
+    } else {
+        qDebug() << "Erreur lors de l'affichage:" << query.lastError().text();
+    }
+
+    return model;
+}
+
+QSqlQueryModel* Employes::chercher(QString nom)
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+    QSqlQuery query;
+
+    // Search for employees by name (nom)
+    query.prepare("SELECT NOMEMP, PRENOMEMP, MAILEMP, DATENEMP, GENREEMP, POSTEEMP, ETATEMP, NUMEMP FROM EMPLOYES WHERE NOMEMP LIKE :nom");
+    query.bindValue(":nom", "%" + nom + "%");  // Add wildcard for partial match
+
+    if (query.exec()) {
+        model->setQuery(query);
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Nom"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Prenom"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Email"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date de Naissance"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("Genre"));
+        model->setHeaderData(5, Qt::Horizontal, QObject::tr("Poste"));
+        model->setHeaderData(6, Qt::Horizontal, QObject::tr("Etat"));
+        model->setHeaderData(7, Qt::Horizontal, QObject::tr("Numéro"));
+        qDebug() << "Recherche réussie";
+    } else {
+        qDebug() << "Erreur lors de la recherche:" << query.lastError().text();
+    }
+
+    return model;
+}
+
+bool Employes::supprimer(QString num)
+{
+    QSqlQuery query;
+    query.prepare("DELETE FROM EMPLOYES WHERE NUMEMP = :num");
+    query.bindValue(":num", num);
+
+    if (query.exec()) {
+        qDebug() << "Employé supprimé avec succès";
+        return true;
+    } else {
+        qDebug() << "Erreur lors de la suppression :" << query.lastError().text();
         return false;
     }
 }

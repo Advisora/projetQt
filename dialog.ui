@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1046</width>
+    <height>536</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="frame_list">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>951</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>661</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>180</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(160, 82, 45);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: #D2B48C; /* Marron soft */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>PDF</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="searchLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>661</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Entrez le titre ici</string>
+    </property>
+    <property name="cursorMoveStyle">
+     <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_15">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>290</y>
+      <width>151</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image :url(:/res/stat.png)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

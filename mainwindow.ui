@@ -2875,9 +2875,9 @@ background-color: #7E9C5A;
      <widget class="QFrame" name="frame">
       <property name="geometry">
        <rect>
-        <x>-10</x>
+        <x>-20</x>
         <y>10</y>
-        <width>1291</width>
+        <width>1311</width>
         <height>871</height>
        </rect>
       </property>
@@ -2907,7 +2907,7 @@ font:20pt &quot;Segoe Ui&quot;;</string>
         <string/>
        </property>
       </widget>
-      <widget class="QLineEdit" name="barrederecherche_13">
+      <widget class="QLineEdit" name="cher_nom">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -2966,11 +2966,11 @@ QPushButton:hover {
         <string>PDF</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="barrederecherche_14">
+      <widget class="QLineEdit" name="input">
        <property name="geometry">
         <rect>
-         <x>680</x>
-         <y>650</y>
+         <x>660</x>
+         <y>640</y>
          <width>241</width>
          <height>41</height>
         </rect>
@@ -3124,20 +3124,6 @@ font-size:14px</string>
         <property name="styleSheet">
          <string notr="true">border-radius:10px;
 font-size:13px</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="dateN">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>190</y>
-          <width>179</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border-radius:10px;
-font-size:14px</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="budgetC">
@@ -3364,6 +3350,16 @@ border:none;
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Téléphone :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
+       <widget class="QDateEdit" name="dateN">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>190</y>
+          <width>181</width>
+          <height>51</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
       <widget class="QPushButton" name="favorisProjet_2">
        <property name="geometry">
@@ -3422,7 +3418,7 @@ border-radius: 10px;</string>
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="supprimerProjet_3">
+      <widget class="QPushButton" name="supprimerC">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -3459,7 +3455,7 @@ border-radius: 10px;</string>
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="modifierProjet_3">
+      <widget class="QPushButton" name="modifierC">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -3516,7 +3512,7 @@ border-radius: 10px;</string>
        <property name="geometry">
         <rect>
          <x>560</x>
-         <y>90</y>
+         <y>150</y>
          <width>681</width>
          <height>461</height>
         </rect>
@@ -3566,6 +3562,36 @@ QPushButton:hover {
        </property>
        <property name="text">
         <string>Liste Des Clients</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="trier">
+       <property name="geometry">
+        <rect>
+         <x>1080</x>
+         <y>630</y>
+         <width>71</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(255, 255, 255); /* Beige */
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="img.qrc">
+         <normaloff>:/tri.png</normaloff>:/tri.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>41</width>
+         <height>41</height>
+        </size>
        </property>
       </widget>
      </widget>

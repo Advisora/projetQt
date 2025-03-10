@@ -12,4 +12,7 @@
         <file>zommshadow.jpeg</file>
     </qresource>
     <qresource prefix="/imm"/>
+    <qresource prefix="/">
+        <file>../tri.png</file>
+    </qresource>
 </RCC>

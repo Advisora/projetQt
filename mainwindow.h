@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "employes.h"
 #include <QMainWindow>
+#include "employes.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,17 +22,19 @@ private slots:
     void on_GestionRessourcesButton_clicked();
     void on_GestionStrategiesButton_clicked();
     void on_GestionEmployeesButton_clicked();
-    void on_supprimerButton_clicked();  // Slot for deleting employee
-
-    void on_ajout_clicked();  // Ajout du slot pour le bouton "ajout"
+    void on_lineEdit_search_textChanged(const QString &text);
+    void on_comboBox_currentTextChanged(const QString &text);
+    void on_supprimerButton_clicked();
     void on_pushButton_ajouter_clicked();
-
-    void on_comboBox_currentTextChanged(const QString &arg1);
-    void on_lineEdit_search_textChanged(const QString &text); // Slot for search functionality
-
+    void on_ajout_clicked();
+    void on_pushButton_search_clicked();
+    void on_sauvegarderButton_clicked();
+    void on_buttonModifier_clicked();
 private:
     Ui::MainWindow *ui;
-    Employes employe;
+    Employes employe; // Instance de la classe Employes
+    Employes tmpEmploye;
 };
+
 
 #endif // MAINWINDOW_H

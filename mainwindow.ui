@@ -2246,7 +2246,7 @@ background-color: #7E9C5A;
        </rect>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <widget class="QFrame" name="ajoutframe">
@@ -2425,7 +2425,7 @@ QPushButton:hover {
 </string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;genre :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Genre :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QLabel" name="label_205">
@@ -2442,7 +2442,7 @@ QPushButton:hover {
 </string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;mot de passe :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Mot de passe :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QLabel" name="label_206">
@@ -2459,7 +2459,7 @@ QPushButton:hover {
 </string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;mail :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Mail :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QLabel" name="label_207">
@@ -2604,7 +2604,7 @@ QPushButton:hover {
 </string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;date de naissance:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Date de naissance:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QDateEdit" name="dateEdit_dateN">
@@ -2738,7 +2738,7 @@ QPushButton:hover {
 </string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;etat&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Etat&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QComboBox" name="comboBox_etat">
@@ -2760,6 +2760,83 @@ QPushButton:hover {
             <string>1</string>
            </property>
           </item>
+         </widget>
+         <widget class="QPushButton" name="sauvegarderButton">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>370</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color: rgb(98, 135, 55);
+font: 10pt &quot;Sylfaen&quot;;
+border-radius: 10px;
+}
+QPushButton:hover {
+background-color: #7E9C5A;
+}</string>
+          </property>
+          <property name="text">
+           <string>sauv</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="idLineEdit">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>370</y>
+            <width>241</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+          </property>
+          <property name="cursorMoveStyle">
+           <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="buttonModifier">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>360</y>
+            <width>91</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(:/res/modif.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
          </widget>
         </widget>
        </widget>
@@ -2937,23 +3014,7 @@ font:20pt &quot;Segoe Ui&quot;;</string>
         <property name="frameShadow">
          <enum>QFrame::Shadow::Raised</enum>
         </property>
-        <widget class="QLabel" name="label_175">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>20</y>
-           <width>51</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">image: url(:/res/search.png)</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="barrederecherche_25">
+        <widget class="QLineEdit" name="lineEdit_recherche">
          <property name="geometry">
           <rect>
            <x>110</x>
@@ -3020,109 +3081,11 @@ QLineEdit:focus {
           <string/>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_79">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>460</y>
-           <width>131</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-background-color: rgb(98, 135, 55);
-font: 10pt &quot;Sylfaen&quot;;
-border-radius: 10px;
-}
-QPushButton:hover {
-background-color: #7E9C5A;
-}</string>
-         </property>
-         <property name="text">
-          <string>Statistiques</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_78">
-         <property name="geometry">
-          <rect>
-           <x>170</x>
-           <y>460</y>
-           <width>121</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-background-color: rgb(160, 82, 45);
-font: 10pt &quot;Sylfaen&quot;;
-border-radius: 10px;
-}
-QPushButton:hover {
-    background-color: #D2B48C; /* Marron soft */
-}
-</string>
-         </property>
-         <property name="text">
-          <string>PDF</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_199">
-         <property name="geometry">
-          <rect>
-           <x>560</x>
-           <y>510</y>
-           <width>61</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">image:url(:/res/modif.png)</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
         <widget class="QLineEdit" name="lineEdit_search">
          <property name="geometry">
           <rect>
-           <x>320</x>
+           <x>440</x>
            <y>460</y>
-           <width>241</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLineEdit {
-    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
-    border-radius: 20px; /* Coins arrondis */
-    color: #000; /* Texte noir */
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: rgb(245, 245, 220); /* Beige */
-}
-
-QLineEdit:hover {
-    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
-    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
-}
-
-QLineEdit:focus {
-    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
-    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
-}
-</string>
-         </property>
-         <property name="cursorMoveStyle">
-          <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="barrederecherche_30">
-         <property name="geometry">
-          <rect>
-           <x>320</x>
-           <y>510</y>
            <width>241</width>
            <height>41</height>
           </rect>
@@ -3169,12 +3132,31 @@ QLineEdit:focus {
           <string/>
          </property>
         </widget>
-        <widget class="QTableView" name="tableView">
+        <widget class="QPushButton" name="supprimerButton">
          <property name="geometry">
           <rect>
-           <x>60</x>
+           <x>680</x>
+           <y>450</y>
+           <width>91</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/res/suppr.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QTableView" name="tableView_2">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
            <y>120</y>
-           <width>831</width>
+           <width>771</width>
            <height>321</height>
           </rect>
          </property>
@@ -3226,11 +3208,156 @@ ui-&gt;tableView-&gt;setStyleSheet(
 );</string>
          </property>
         </widget>
+        <widget class="QTableView" name="tableView">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>150</y>
+           <width>661</width>
+           <height>271</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	font: 7pt &quot;Arial&quot;;
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QFrame:focus {
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+ui-&gt;tableView-&gt;setStyleSheet(
+    &quot;QTableView { &quot;
+    &quot;border: 1px solid #d3d3d3; &quot;
+    &quot;background-color: #f5f5f5; &quot;
+    &quot;selection-background-color: #a8d5e2; &quot;
+    &quot;font: 10pt 'Arial'; &quot;
+    &quot;gridline-color: #d3d3d3; &quot;
+    &quot;}&quot;
+    &quot;QHeaderView::section { &quot;
+    &quot;background-color: #a8d5e2; &quot;
+    &quot;padding: 8px; &quot;
+    &quot;border: 1px solid #d3d3d3; &quot;
+    &quot;font-weight: bold; &quot;
+    &quot;text-align: center; &quot;
+    &quot;}&quot;
+    &quot;QTableView::item:selected { &quot;
+    &quot;background-color: #a8d5e2; &quot;
+    &quot;color: black; &quot;
+    &quot;}&quot;
+    &quot;QTableView::item { &quot;
+    &quot;padding: 4px; &quot;
+    &quot;}&quot;
+    &quot;QTableView::alternate { &quot;
+    &quot;background-color: #e0e0e0; &quot;
+    &quot;}&quot;
+);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ajout">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>710</x>
+           <y>200</y>
+           <width>171</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+image: url(:/res/add-green-icon-2048x2048-i53h8y3r.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_tri">
+         <property name="geometry">
+          <rect>
+           <x>840</x>
+           <y>120</y>
+           <width>111</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/res/204.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonGenererPDF">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>450</y>
+           <width>131</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	image: url(:/res/icone-pdf-vert - Copy.png);
+
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_79">
+         <property name="geometry">
+          <rect>
+           <x>820</x>
+           <y>220</y>
+           <width>151</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	image: url(:/res/progress_statistics-512.webp);
+
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
         <widget class="QPushButton" name="pushButton_80">
          <property name="geometry">
           <rect>
-           <x>60</x>
-           <y>70</y>
+           <x>320</x>
+           <y>90</y>
            <width>241</width>
            <height>51</height>
           </rect>
@@ -3249,46 +3376,58 @@ QPushButton:hover {
           <string>Liste Des Employées</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="ajout">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
+        <widget class="QPushButton" name="pushButton_search">
          <property name="geometry">
           <rect>
-           <x>690</x>
-           <y>490</y>
-           <width>171</width>
-           <height>51</height>
+           <x>50</x>
+           <y>20</y>
+           <width>61</width>
+           <height>41</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton {
-background-color: rgb(98, 135, 55);
-font: 10pt &quot;Sylfaen&quot;;
-border-radius: 10px;
-}
-QPushButton:hover {
-background-color: #7E9C5A;
-}</string>
-         </property>
-         <property name="text">
-          <string>Ajouter</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="supprimerButton">
-         <property name="geometry">
-          <rect>
-           <x>570</x>
-           <y>460</y>
-           <width>81</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">image: url(:/res/suppr.png);</string>
+          <string notr="true">image: url(:/res/search.png);</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditEmployeId">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>460</y>
+           <width>241</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: 2px solid rgb(209, 199, 161); /* Bordure légèrement plus foncée */
+    border-radius: 20px; /* Coins arrondis */
+    color: #000; /* Texte noir */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 245, 220); /* Beige */
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(160, 150, 120); /* Bordure plus foncée au survol */
+    background-color: rgb(255, 255, 235); /* Fond légèrement plus clair */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(100, 80, 50); /* Bordure encore plus foncée lors du focus */
+    background-color: rgb(255, 255, 240); /* Fond encore plus clair lors du focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ombre autour du champ en focus */
+}
+</string>
+         </property>
+         <property name="cursorMoveStyle">
+          <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
          </property>
         </widget>
        </widget>

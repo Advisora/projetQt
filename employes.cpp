@@ -1,26 +1,109 @@
 #include "employes.h"
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QDebug>
 
-Employes::Employes() {}
-
-Employes::Employes(QString nom, QString prenom, QString mail, QString password, QString dateN, QString genre, QString poste, QString etat, QString num)
-{
+Employes::Employes(QString nom, QString prenom, QString mail, QString password, QString date, QString genre, QString poste, QString etat, QString num) {
     this->nom = nom;
     this->prenom = prenom;
     this->mail = mail;
     this->password = password;
-    this->dateN = dateN;
+    this->date = date;
     this->genre = genre;
     this->poste = poste;
     this->etat = etat;
     this->num = num;
 }
 
-bool Employes::ajouter()
-{
+bool Employes::ajouter() {
     QSqlQuery query;
     query.prepare("INSERT INTO EMPLOYES (NOMEMP, PRENOMEMP, MAILEMP, PASSWORDEMP, DATENEMP, GENREEMP, POSTEEMP, ETATEMP, NUMEMP) "
-                  "VALUES (:nom, :prenom, :mail, :password, TO_DATE(:dateN, 'YYYY-MM-DD'), :genre, :poste, :etat, :num)");
+                  "VALUES (:nom, :prenom, :mail, :password, TO_DATE(:date, 'YYYY-MM-DD'), :genre, :poste, :etat, :num)");
 
+    query.bindValue(":nom", nom);
+    query.bindValue(":prenom", prenom);
+    query.bindValue(":mail", mail);
+    query.bindValue(":password", password);
+    query.bindValue(":date", date);
+    query.bindValue(":genre", genre);
+    query.bindValue(":poste", poste);
+    query.bindValue(":etat", etat);
+    query.bindValue(":num", num);
+
+    return query.exec();
+}
+
+QSqlQueryModel* Employes::afficher() {
+    QSqlQueryModel* model = new QSqlQueryModel();
+    model->setQuery("SELECT IDEMP, NOMEMP, PRENOMEMP, POSTEEMP, MAILEMP, DATENEMP, GENREEMP, ETATEMP, NUMEMP FROM EMPLOYES");
+    return model;
+}
+
+bool Employes::supprimer(int id) {
+    QSqlQuery query;
+    query.prepare("DELETE FROM EMPLOYES WHERE IDEMP = :id");
+    query.bindValue(":id", id);
+
+    if (!query.exec()) {
+        qDebug() << "❌ Erreur SQL lors de la suppression:" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "✅ Suppression réussie pour l'ID:" << id;
+    return true;
+}
+
+QSqlQueryModel* Employes::chercher(const QString& text) {
+    QSqlQueryModel* model = new QSqlQueryModel();
+    QSqlQuery query;
+
+    query.prepare("SELECT IDEMP, NOMEMP, PRENOMEMP, POSTEEMP, MAILEMP, DATENEMP, GENREEMP, ETATEMP, NUMEMP "
+                  "FROM EMPLOYES WHERE IDEMP LIKE :search OR NOMEMP LIKE :search");
+    QString searchPattern = "%" + text + "%";
+    query.bindValue(":search", searchPattern);
+
+    if (!query.exec()) {
+        qDebug() << "Erreur lors de la recherche :" << query.lastError().text();
+    }
+
+    model->setQuery(query);
+    return model;
+}
+
+QSqlQueryModel* Employes::chercherParNom(const QString& nom) {
+    QSqlQueryModel* model = new QSqlQueryModel();
+    QSqlQuery query;
+
+    query.prepare("SELECT IDEMP, NOMEMP, PRENOMEMP, POSTEEMP, MAILEMP, DATENEMP, GENREEMP, ETATEMP, NUMEMP "
+                  "FROM EMPLOYES WHERE NOMEMP LIKE :nom");
+    query.bindValue(":nom", "%" + nom + "%");
+
+    if (!query.exec()) {
+        qDebug() << "Erreur lors de la recherche par nom :" << query.lastError().text();
+    }
+
+    model->setQuery(query);
+    return model;
+}
+bool Employes::modifier(int id, const QString &nom, const QString &prenom, const QString &mail,
+                        const QString &password, const QString &dateN, const QString &genre,
+                        const QString &poste, const QString &etat, const QString &num) {
+    QSqlQuery query;
+
+    // Prepare the SQL query
+    query.prepare("UPDATE EMPLOYES SET "
+                  "NOMEMP = :nom, "
+                  "PRENOMEMP = :prenom, "
+                  "MAILEMP = :mail, "
+                  "PASSWORDEMP = :password, "
+                  "DATENEMP = TO_DATE(:dateN, 'YYYY-MM-DD'), "
+                  "GENREEMP = :genre, "
+                  "POSTEEMP = :poste, "
+                  "ETATEMP = :etat, "
+                  "NUMEMP = :num "
+                  "WHERE IDEMP = :id");
+
+    // Bind values to the query
     query.bindValue(":nom", nom);
     query.bindValue(":prenom", prenom);
     query.bindValue(":mail", mail);
@@ -30,79 +113,54 @@ bool Employes::ajouter()
     query.bindValue(":poste", poste);
     query.bindValue(":etat", etat);
     query.bindValue(":num", num);
+    query.bindValue(":id", id);
 
-    if (query.exec()) {
-        qDebug() << "Employé ajouté avec succès";
-        return true;
-    } else {
-        qDebug() << "Erreur lors de l'ajout :" << query.lastError().text();
+    // Execute the query
+    if (!query.exec()) {
+        qDebug() << "❌ Error in modifier function:" << query.lastError().text();
+        qDebug() << "Query:" << query.lastQuery();
         return false;
     }
+
+    qDebug() << "✅ Employee with ID" << id << "updated successfully.";
+    return true;
 }
 
-QSqlQueryModel* Employes::afficher()
-{
-    QSqlQueryModel *model = new QSqlQueryModel();
+void Employes::chargerEmploye(int id) {
     QSqlQuery query;
+    query.prepare("SELECT NOMEMP, PRENOMEMP, MAILEMP, PASSWORDEMP, DATENEMP, GENREEMP, POSTEEMP, ETATEMP, NUMEMP FROM EMPLOYES WHERE IDEMP = :id");
+    query.bindValue(":id", id);
 
-    query.prepare("SELECT NOMEMP, PRENOMEMP, MAILEMP, DATENEMP, GENREEMP, POSTEEMP, ETATEMP, NUMEMP FROM EMPLOYES");
-
-    if (query.exec()) {
-        model->setQuery(query);
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Nom"));
-        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Prenom"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Email"));
-        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date de Naissance"));
-        model->setHeaderData(4, Qt::Horizontal, QObject::tr("Genre"));
-        model->setHeaderData(5, Qt::Horizontal, QObject::tr("Poste"));
-        model->setHeaderData(6, Qt::Horizontal, QObject::tr("Etat"));
-        model->setHeaderData(7, Qt::Horizontal, QObject::tr("Numéro"));
-        qDebug() << "Affichage réussi";
+    if (query.exec() && query.next()) {
+        // Charger les valeurs dans l'objet Employes
+        nom = query.value("NOMEMP").toString();
+        prenom = query.value("PRENOMEMP").toString();
+        mail = query.value("MAILEMP").toString();
+        password = query.value("PASSWORDEMP").toString();
+        date = query.value("DATENEMP").toString();
+        genre = query.value("GENREEMP").toString();
+        poste = query.value("POSTEEMP").toString();
+        etat = query.value("ETATEMP").toString();
+        num = query.value("NUMEMP").toString();
     } else {
-        qDebug() << "Erreur lors de l'affichage:" << query.lastError().text();
+        qDebug() << "❌ Erreur: Impossible de charger l'employé" << query.lastError();
     }
-
-    return model;
 }
-
-QSqlQueryModel* Employes::chercher(QString nom)
-{
-    QSqlQueryModel* model = new QSqlQueryModel();
-    QSqlQuery query;
-
-    // Search for employees by name (nom)
-    query.prepare("SELECT NOMEMP, PRENOMEMP, MAILEMP, DATENEMP, GENREEMP, POSTEEMP, ETATEMP, NUMEMP FROM EMPLOYES WHERE NOMEMP LIKE :nom");
-    query.bindValue(":nom", "%" + nom + "%");  // Add wildcard for partial match
-
-    if (query.exec()) {
-        model->setQuery(query);
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Nom"));
-        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Prenom"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Email"));
-        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date de Naissance"));
-        model->setHeaderData(4, Qt::Horizontal, QObject::tr("Genre"));
-        model->setHeaderData(5, Qt::Horizontal, QObject::tr("Poste"));
-        model->setHeaderData(6, Qt::Horizontal, QObject::tr("Etat"));
-        model->setHeaderData(7, Qt::Horizontal, QObject::tr("Numéro"));
-        qDebug() << "Recherche réussie";
-    } else {
-        qDebug() << "Erreur lors de la recherche:" << query.lastError().text();
-    }
-
-    return model;
-}
-
-bool Employes::supprimer(QString num)
+bool Employes::existe(int id)
 {
     QSqlQuery query;
-    query.prepare("DELETE FROM EMPLOYES WHERE NUMEMP = :num");
-    query.bindValue(":num", num);
+    query.prepare("SELECT COUNT(*) FROM EMPLOYES WHERE IDEMP = :id");
+    query.bindValue(":id", id);
 
-    if (query.exec()) {
-        qDebug() << "Employé supprimé avec succès";
-        return true;
-    } else {
-        qDebug() << "Erreur lors de la suppression :" << query.lastError().text();
+    if (!query.exec()) {
+        qDebug() << "Erreur lors de l'exécution de la requête : " << query.lastError().text();
         return false;
     }
+
+    if (query.next()) {
+        int count = query.value(0).toInt();
+        qDebug() << "Count for ID" << id << ":" << count;
+        return count > 0;
+    }
+    return false;
 }

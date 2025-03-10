@@ -2,24 +2,26 @@
 #define EMPLOYES_H
 
 #include <QString>
-#include <QSqlQuery>
-#include <QSqlError>
 #include <QSqlQueryModel>
-#include <QDebug>
 
-class Employes
-{
+class Employes {
 public:
-    Employes();
-    Employes(QString, QString, QString, QString, QString, QString, QString, QString, QString);
+    Employes(QString nom = "", QString prenom = "", QString mail = "", QString password = "", QString date = "", QString genre = "", QString poste = "", QString etat = "", QString num = "");
 
     bool ajouter();
     QSqlQueryModel* afficher();
-    QSqlQueryModel* chercher(QString nom);  // Search employees by name
-    bool supprimer(QString num);  // Delete employee by num
+    bool supprimer(int id);
+    QSqlQueryModel* chercher(const QString& text);
+    QSqlQueryModel* chercherParNom(const QString& nom);
+    void chargerEmploye(int id);  // ✅ Fonction pour charger les infos d'un employé
 
-private:
-    QString nom, prenom, mail, password, dateN, genre, poste, etat, num;
+    bool modifier(int id, const QString &nom, const QString &prenom, const QString &mail,
+                            const QString &password, const QString &dateN, const QString &genre,
+                            const QString &poste, const QString &etat, const QString &num);// Déclaration de la fonction modifier
+    bool existe(int id);
+public:
+    QString nom, prenom, mail, password, date, genre, poste, etat, num;
+
 };
 
 #endif // EMPLOYES_H

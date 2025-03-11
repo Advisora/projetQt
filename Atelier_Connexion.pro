@@ -25,19 +25,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    events.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp
 
 HEADERS += \
+    events.h \
         mainwindow.h \
     connection.h
 
 FORMS += \
-        dialog.ui \
         mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    modif.png \
+    notif.png \
+    prof.png \
+    profile.jpg \
+    search.png \
+    supp.png \
+    suppr.png \
+    zoom.jpg \
+    zoom.png
